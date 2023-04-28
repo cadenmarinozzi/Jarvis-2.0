@@ -13,7 +13,20 @@ pip install -r requirements.txt
 You will then need to generate an OpenAI API key, which you can do [here](https://beta.openai.com/). Once you have your API key, add it to a file called `.env` with the following statement:
 
 ```
-OPENAI_API_KEY=key_here
+OPENAI_API_KEY='<key_here>'
+```
+
+You will also need an openweathermap API key and an ipregistry.co API key:
+
+```
+OPENWEATHERMAP_API_KEY='<key_here>'
+IPREGISTRY_API_KEY='<key_here>'
+```
+
+(Optional) If you use the `ibm-watson` text to speech service, you will need to add your API key to the environment file too:
+
+```
+WATSON_API_KEY='<key_here>'
 ```
 
 ## Usage
@@ -27,6 +40,19 @@ python main.py
 ## Configuration
 
 The config is located in the `config.json` file, which contains all of the options for Jarvis.
+
+```json
+{
+  "name": "Jarvis", // What you want the name of the AI to be
+  "input": "text", // text or voice
+  "output": "text", // text or voice
+  "service": "ibm-watson", // pyttsx3 (No API key required) or ibm-watson (Requires API ke)
+  "recognizer": "whisper", // whisper, google, whisper-local
+  "wakeup-time": "6:00:00 AM",
+  "debugging": true, // Print debug info
+  "has_gpt4": true // true: Use GPT-4 or false: GPT-3.5-turbo
+}
+```
 
 ## Plugins - How it works
 
