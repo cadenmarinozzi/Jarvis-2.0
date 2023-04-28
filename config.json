@@ -1,0 +1,10 @@
+{
+  "name": "Jarvis",
+  "input": "text",
+  "output": "text",
+  "service": "ibm-watson",
+  "recognizer": "whisper",
+  "wakeup-time": "6:00:00 AM",
+  "debugging": true,
+  "has_gpt4": true
+}
