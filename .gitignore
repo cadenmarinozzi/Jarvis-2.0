@@ -5,3 +5,4 @@
 **/.env
 **/speech.wav
 **/venv
+**/.DS_Store
